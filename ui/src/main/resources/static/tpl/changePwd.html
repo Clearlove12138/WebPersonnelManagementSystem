@@ -1,0 +1,84 @@
+<div class="iflyui-margins">
+        <script>
+                //<![CDATA[
+                var ctx = '';
+                //]]>
+            </script>
+        <link rel="icon" href="/../resources/img/icons/favicon.ico" type="image/x-icon"/>
+        <link href="/../resources/img/icons/iflyui-shortcut.png" rel="shortcut icon" type="image/x-icon"/>
+        <link href="/../resources/css/layer.css" rel="stylesheet"/>
+        <link href="/../resources/css/jquery.mCustomScrollbar.css" rel="stylesheet" />
+        <link href="/../resources/css/common.css" rel="stylesheet"/>
+        <link href="/../resources/css/findpassword.css" rel="stylesheet"/>
+
+    <!--头部容器 - 开始-->
+    <div class="iflyui-hd">
+        <div class="iflyui-wrap">
+            <div class="iflyui-logobox">
+                <h1 class="iflyui-logo">
+                    <a href="javascript:;">
+                        <i>重置密码</i>
+                    </a>
+                </h1>
+            </div>
+
+        </div>
+    </div>
+    <!--头部容器 - 结束-->
+
+    <form action="" id="retPassword">
+        <input type="hidden" name="hidNotAllowStr"id="hidNotAllowStr" value="iflytek;xunfei;linxi" />
+        <input type="hidden" name="hidWeakPwd" id="hidWeakPwd" value="iflytek!234;ifly!2014;ifly!2015" />
+        <div class="iflyui-box ifly-findpassword">
+            <div class="ifly-main">
+
+                <div class="ifly-main-form ifly-main-form-editPassword">
+                    <div class="ifly-editPassword-tips">人事管理系统 密码修改</div>
+                    <dl>
+                        <dt>用户名</dt>
+                        <dd><input type="text" class="ifly-input" id="username" placeholder="如：sanzhang" autocomplete="off" /><span class="ifly-gray"></span></dd>
+                    </dl>
+                    <dl>
+                        <dt>原密码</dt>
+                        <dd><input type="password" class="ifly-input" id="password"  autocomplete="off" /></dd>
+                    </dl>
+                    <dl>
+                        <dt>新密码</dt>
+                        <dd><input type="password" class="ifly-input" id="newPwd" autocomplete="off" /></dd>
+                    </dl>
+                    <dl>
+                        <dt>确认密码</dt>
+                        <dd><input type="password" class="ifly-input" id="confirmPwd" autocomplete="off" /></dd>
+                    </dl>
+                    <dl>
+                        <dt>&nbsp;</dt>
+                        <dd><input type="button" onclick="savePwd()" class="ifly-submit ifly-button-block" value="确认" id="retPassSubmit" /></dd>
+                    </dl>
+                    <div class="ifly-ver-rule">
+
+                        <h2>注：密码需满足以下规则：</h2>
+                        <ul>
+                            <li><i>1</i>8 - 20个字符</li>
+                            <li><i>2</i>含以下选项中的3类即可：
+                                <p>a) 英文大写字母 ( A - Z )</p>
+                                <p>b) 英文小写字母 ( a - z )</p>
+                                <p>c) 数字 (  0 - 9 )</p>
+                                <p>d) 非字母数字符 ( !  $  #  % )</p>
+                            </li>
+                            <li><i>3</i>不能是最近3次用过的密码</li>
+                            <li><i>4</i>不能包含递增、递减、连续3个以上相同的数字或字符，如123，654，aaa，666</li>
+                            <li><i>5</i>新密码不能包含 “_” 和 “&” 字符</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <!--底部容器 - 开始-->
+    <!-- <div  class="iflyui-ft iflyui-gray">Copyright &copy;</div> -->
+    <!--底部容器 - 开始-->
+    <script src="/../resources/js/jquery.min.js"></script>
+    <script src="/../resources/js/jbase64.js"></script>
+    <script src="/../resources/js/modifyPwd.js"></script>
+</div>

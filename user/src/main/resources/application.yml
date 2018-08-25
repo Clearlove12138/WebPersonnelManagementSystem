@@ -1,0 +1,11 @@
+server:
+  port: 8085
+spring:
+  datasource:
+    username: root
+    password: admin
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/personnel_db?zeroDateTimeBehavior=convertToNull&useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&useSSL=false
+#    url: jdbc:mysql://10.1.135.31:3306/emrdb?zeroDateTimeBehavior=convertToNull&useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
