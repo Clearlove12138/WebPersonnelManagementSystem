@@ -44,7 +44,7 @@ $(function() {
 // 保存
 function savePwd() {
 	if ($.trim($("#username").val()) == "") {
-		msgBox.init('请填写域账号', 'no');
+		msgBox.init('请填写用户名', 'no');
 		$("#username").focus();
 		return false;
 	}

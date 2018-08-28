@@ -5,6 +5,9 @@ import com.example.ui.DTO.UserDTO;
 import com.example.ui.service.UserService;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestBody;
 
@@ -12,7 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
-public class UserHystrixService {
+public class UserHystrixService implements UserDetailsService {
     @Autowired
     UserService userService;
 
@@ -47,5 +50,11 @@ public class UserHystrixService {
 
     public String fallbackChangePwd(ChangePwdDTO changePwd) {
         return "网络错误," + changePwd.getUsername() + "密码修改失败";
+    }
+
+
+    @Override
+    public UserDetails loadUserByUsername(String s) throws UsernameNotFoundException {
+        return null;
     }
 }
