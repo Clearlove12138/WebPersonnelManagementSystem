@@ -29,13 +29,20 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     DataSource dataSource;
 
+    @Autowired
+    MyAuthenticationProvider myAuthenticationProvider;
+
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+        /*
         auth.jdbcAuthentication().dataSource(dataSource)
             .usersByUsernameQuery("select username,password,enabled "
                     +"from user where username = ?")
             .authoritiesByUsernameQuery("select username,role "
                     +"from user where username = ?");
+                    */
+        auth.authenticationProvider(myAuthenticationProvider);
+//        auth.inMemoryAuthentication();
 //        super.configure(auth);
     }
     @Override
